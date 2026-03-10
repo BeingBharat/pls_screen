@@ -1,9 +1,7 @@
-
-
 import SwiftUI
 
 struct RoundedCornerShape: Shape {
-    var radius:  CGFloat
+    var radius: CGFloat
     var corners: UIRectCorner
 
     var animatableData: CGFloat {

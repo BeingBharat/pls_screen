@@ -1,6 +1,4 @@
-
 import SwiftUI
-
 
 struct ScrollOffsetKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
@@ -9,9 +7,15 @@ struct ScrollOffsetKey: PreferenceKey {
     }
 }
 
-
 struct CategoriesMinYKey: PreferenceKey {
     static var defaultValue: CGFloat = 999
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
+
+struct NavBarHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = nextValue()
     }
